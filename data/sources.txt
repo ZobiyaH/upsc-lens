@@ -1,0 +1,20 @@
+# PUBLIC sources only. One per line. A failing line is reported and skipped; fix or delete it and rerun.
+#   name | URL                          one PDF or page
+#   crawl:name | page | regex [| pyq]   all matching PDFs linked on a page (| pyq = save as question papers)
+# Pages marked (check) are my best knowledge of the official site; if a line finds 0 PDFs, open the page in your
+# browser, copy the real PDF link and use the plain "name | URL" form instead.
+
+# Constitution of India, English edition (Legislative Department)
+crawl:constitution | https://lddashboard.legislative.gov.in/constitution-of-india | in English\s+Download
+
+# Economic Survey and Budget documents (check)
+crawl:economic_survey | https://www.indiabudget.gov.in/economicsurvey/ | (?i)(chapter|volume|survey)
+crawl:budget | https://www.indiabudget.gov.in/ | (?i)(budget speech|highlights|at a glance)
+
+# UPSC General Studies question papers (check) - saved to data/pyq_pdfs/, then run: python -m src.import_pyq
+crawl:upsc | https://upsc.gov.in/examinations/previous-question-papers | (?i)general.?studies | pyq
+
+# NCERT: open ncert.nic.in -> Textbook, copy each chapter's PDF link, then add lines like:
+# ncert_polity_11_ch1 | https://ncert.nic.in/textbook/pdf/XXXX.pdf
+# Bare acts: indiacode.nic.in (search the Act, copy the PDF link). PRS summaries: prsindia.org (copy page or PDF link).
+# notes | https://prsindia.org/....

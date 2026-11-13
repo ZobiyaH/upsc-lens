@@ -1,0 +1,10 @@
+pymupdf
+fastembed
+numpy
+rank_bm25
+python-dotenv
+google-genai
+fastapi
+uvicorn
+python-multipart
+requests

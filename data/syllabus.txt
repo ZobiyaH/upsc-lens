@@ -1,0 +1,76 @@
+# ID | Stage | Paper | Subject | Topic | keywords (comma separated)
+# Edit any line, add new lines, or put # at the start of a line to disable it. Then run: python -m src.build_index
+# Written from the official UPSC syllabus (paraphrased). Verify wording against upsc.gov.in -> Examinations -> Syllabus.
+P1_CUR_01 | Prelims | GS1 | Current Events | Current events of national importance | bill, act, scheme, policy, Supreme Court, election, ministry, report, index
+P1_CUR_02 | Prelims | GS1 | Current Events | Current events of international importance | summit, treaty, UN, G20, BRICS, WTO, IMF, agreement, conflict, award
+P1_HIS_01 | Prelims | GS1 | History | Ancient India: history, art and culture | Harappan, Maurya, Gupta, temple architecture, Buddhism, inscription, ASI
+P1_HIS_02 | Prelims | GS1 | History | Medieval India: history, art and culture | Delhi Sultanate, Mughal, Vijayanagara, Bhakti, Sufi, miniature painting
+P1_HIS_03 | Prelims | GS1 | History | Modern India and the Indian National Movement | Gandhi, Congress, 1857, Quit India, Constitution making, reformers
+P1_GEO_01 | Prelims | GS1 | Geography | Physical geography of India and the World | monsoon, river, mountain, climate, soil, ocean current, earthquake
+P1_GEO_02 | Prelims | GS1 | Geography | Social and economic geography of India and the World | population, census, agriculture, minerals, industry, urbanisation, places in news
+P1_POL_01 | Prelims | GS1 | Polity | Constitution and political system | fundamental rights, DPSP, amendment, Article, President, Parliament, judiciary
+P1_POL_02 | Prelims | GS1 | Polity | Panchayati Raj and local governance | panchayat, municipality, 73rd amendment, 74th amendment, gram sabha
+P1_POL_03 | Prelims | GS1 | Polity | Public policy and rights issues | right to information, rights, commission, policy, charter, welfare
+P1_ECO_01 | Prelims | GS1 | Economy | Economic development: growth, banking, inflation, budget, external sector | GDP, RBI, repo rate, inflation, fiscal deficit, exports, rupee, GST
+P1_ECO_02 | Prelims | GS1 | Economy | Sustainable development, poverty and inclusion | SDG, poverty line, financial inclusion, Jan Dhan, multidimensional poverty
+P1_ECO_03 | Prelims | GS1 | Economy | Demographics and social sector initiatives | census, fertility rate, health scheme, education scheme, NFHS, literacy
+P1_ENV_01 | Prelims | GS1 | Environment | Ecology, biodiversity and protected areas | national park, tiger reserve, IUCN, Ramsar, endangered species, wetland, biosphere
+P1_ENV_02 | Prelims | GS1 | Environment | Climate change and environmental issues | COP, carbon, emissions, net zero, Paris Agreement, pollution, renewable
+P1_SCI_01 | Prelims | GS1 | Science | General science (physics, chemistry, biology) | vaccine, disease, element, energy, nutrition, genetics, everyday science
+P1_SCI_02 | Prelims | GS1 | Science | Science and technology developments | ISRO, satellite, mission, defence missile, AI, semiconductor, biotechnology, quantum
+G1_CUL_01 | Mains | GS1 | Art and Culture | Indian culture: salient aspects of art forms, literature and architecture from ancient to modern times | temple, dance, painting, heritage, UNESCO, language, literature, GI tag
+G1_HIS_01 | Mains | GS1 | History | Modern Indian history from mid-18th century: significant events, personalities, issues | British rule, revolt, reformers, economic impact, Gandhi, Ambedkar
+G1_HIS_02 | Mains | GS1 | History | Freedom struggle: its various stages and important contributors from different parts of the country | non-cooperation, civil disobedience, Quit India, revolutionaries, INA
+G1_HIS_03 | Mains | GS1 | History | Post-independence consolidation and reorganization within the country | integration of princely states, linguistic states, States Reorganisation, Green Revolution
+G1_HIS_04 | Mains | GS1 | History | World history: Industrial Revolution, world wars, redrawal of boundaries, colonization, decolonization, political philosophies | communism, capitalism, Cold War, imperialism, League of Nations
+G1_SOC_01 | Mains | GS1 | Society | Salient features of Indian society and diversity of India | caste, tribe, religion, language, diversity, unity, family, marriage
+G1_SOC_02 | Mains | GS1 | Society | Role of women and women's organisations; population and associated issues; poverty and developmental issues; urbanization | women empowerment, workforce participation, slums, smart city, ageing
+G1_SOC_03 | Mains | GS1 | Society | Effects of globalization on Indian society | cultural change, migration, consumerism, gig economy, social media
+G1_SOC_04 | Mains | GS1 | Society | Social empowerment, communalism, regionalism and secularism | communal violence, secularism, regional movements, reservation, separatism
+G1_GEO_01 | Mains | GS1 | Geography | Salient features of world's physical geography | plate tectonics, ocean, atmosphere, climate zones, landforms
+G1_GEO_02 | Mains | GS1 | Geography | Distribution of key natural resources across the world; factors for location of industries | coal, oil, minerals, water, industrial location, special economic zone
+G1_GEO_03 | Mains | GS1 | Geography | Geophysical phenomena: earthquakes, tsunami, volcanic activity, cyclones; geographical features, flora and fauna and changes in them | cyclone, earthquake, glacier, melting ice, landslide, Arctic
+G2_POL_01 | Mains | GS2 | Polity | Indian Constitution: historical underpinnings, evolution, features, amendments, significant provisions and basic structure | basic structure, Article 368, preamble, amendment, fundamental rights
+G2_POL_02 | Mains | GS2 | Polity | Functions and responsibilities of the Union and the States; federal structure issues and challenges; devolution of powers and finances to local levels | federalism, Finance Commission, GST Council, Governor, panchayat, Centre-State
+G2_POL_03 | Mains | GS2 | Polity | Separation of powers between various organs; dispute redressal mechanisms and institutions | judicial review, tribunal, inter-state water dispute, collegium, overreach
+G2_POL_04 | Mains | GS2 | Polity | Comparison of the Indian constitutional scheme with that of other countries | US, UK, presidential system, parliamentary system, comparative constitution
+G2_POL_05 | Mains | GS2 | Polity | Parliament and State Legislatures: structure, functioning, conduct of business, powers and privileges and issues | Lok Sabha, Rajya Sabha, ordinance, Speaker, anti-defection, committee, privilege
+G2_POL_06 | Mains | GS2 | Polity | Structure, organization and functioning of the Executive and the Judiciary; ministries and departments; pressure groups and formal/informal associations | Supreme Court, High Court, cabinet, PIL, pendency, lobbying, trade union
+G2_POL_07 | Mains | GS2 | Polity | Salient features of the Representation of the People Act | RPA 1951, disqualification, electoral reform, Election Commission, model code of conduct, electoral bonds
+G2_POL_08 | Mains | GS2 | Polity | Appointments to constitutional posts; powers, functions and responsibilities of constitutional bodies | CAG, UPSC, Election Commissioner, Finance Commission, NHRC, Attorney General
+G2_POL_09 | Mains | GS2 | Polity | Statutory, regulatory and quasi-judicial bodies | SEBI, CCI, TRAI, Lokpal, CIC, NGT, tribunal, regulator
+G2_GOV_01 | Mains | GS2 | Governance | Government policies and interventions for development in various sectors and issues arising out of their design and implementation | scheme, implementation gap, centrally sponsored, DBT, NITI Aayog, policy
+G2_GOV_02 | Mains | GS2 | Governance | Development processes and the development industry: role of NGOs, SHGs, associations, donors, charities and other stakeholders | NGO, self-help group, FCRA, CSR, microfinance, civil society
+G2_GOV_03 | Mains | GS2 | Governance | Important aspects of governance, transparency and accountability; e-governance; citizens charters; institutional measures | RTI, e-governance, Digital India, citizen charter, social audit, grievance
+G2_GOV_04 | Mains | GS2 | Governance | Role of civil services in a democracy | bureaucracy, civil services reform, lateral entry, neutrality, Mission Karmayogi
+G2_SOC_01 | Mains | GS2 | Social Justice | Welfare schemes for vulnerable sections of the population by the Centre and States; mechanisms, laws, institutions and bodies for their protection and betterment | SC, ST, women, children, disabled, minorities, POCSO, reservation, welfare scheme
+G2_SOC_02 | Mains | GS2 | Social Justice | Issues relating to development and management of social sector/services relating to health and education | health, hospital, insurance, Ayushman Bharat, NEP, school, literacy, nutrition
+G2_SOC_03 | Mains | GS2 | Social Justice | Issues relating to poverty and hunger | poverty, hunger index, malnutrition, food security, PDS, MGNREGA, mid-day meal
+G2_IR_01 | Mains | GS2 | International Relations | India and its neighbourhood relations | Pakistan, China, Nepal, Bangladesh, Sri Lanka, Bhutan, Maldives, Myanmar, border
+G2_IR_02 | Mains | GS2 | International Relations | Bilateral, regional and global groupings and agreements involving India and/or affecting India's interests | Quad, BRICS, SCO, BIMSTEC, ASEAN, free trade agreement, bilateral talks
+G2_IR_03 | Mains | GS2 | International Relations | Effect of policies and politics of developed and developing countries on India's interests; Indian diaspora | US policy, H-1B, tariff, sanctions, diaspora, remittance, Gulf
+G2_IR_04 | Mains | GS2 | International Relations | Important international institutions, agencies and fora, their structure and mandate | UN, UNSC, WTO, IMF, World Bank, WHO, ICJ, G20, reform
+G3_ECO_01 | Mains | GS3 | Economy | Indian economy and issues relating to planning, mobilization of resources, growth, development and employment | growth, unemployment, GDP, planning, savings, investment, jobs
+G3_ECO_02 | Mains | GS3 | Economy | Inclusive growth and issues arising from it | inequality, financial inclusion, informal sector, women workforce, MSME
+G3_ECO_03 | Mains | GS3 | Economy | Government budgeting | budget, fiscal deficit, FRBM, subsidy, taxation, GST, revenue, expenditure
+G3_AGR_01 | Mains | GS3 | Agriculture | Major crops, cropping patterns, irrigation, storage, transport and marketing of agricultural produce; e-technology for farmers | MSP, APMC, irrigation, crop insurance, e-NAM, farm laws, drone
+G3_AGR_02 | Mains | GS3 | Agriculture | Farm subsidies and MSP; buffer stocks and food security; Public Distribution System | fertiliser subsidy, MSP, FCI, buffer stock, PDS, WTO, food security
+G3_AGR_03 | Mains | GS3 | Agriculture | Economics of animal rearing; food processing industries; supply chain management; land reforms | dairy, livestock, food processing, cold chain, land reform, tenancy
+G3_ECO_04 | Mains | GS3 | Economy | Effects of liberalization on the economy; changes in industrial policy and their effects on industrial growth | liberalisation, PLI, industrial policy, Make in India, FDI, disinvestment
+G3_INF_01 | Mains | GS3 | Infrastructure | Infrastructure: energy, ports, roads, airports, railways; investment models | highway, railway, port, airport, power, PPP, National Infrastructure Pipeline
+G3_SNT_01 | Mains | GS3 | Science and Technology | Science and technology: developments and applications in everyday life; achievements of Indians; indigenization of technology | ISRO, DRDO, indigenous, research, vaccine, startup, innovation
+G3_SNT_02 | Mains | GS3 | Science and Technology | Awareness in IT, space, computers, robotics, nanotechnology, biotechnology; intellectual property rights | AI, semiconductor, quantum, gene editing, patent, space mission, 5G
+G3_ENV_01 | Mains | GS3 | Environment | Conservation, environmental pollution and degradation, environmental impact assessment | EIA, air pollution, forest, wildlife, biodiversity, Western Ghats, plastic
+G3_DIS_01 | Mains | GS3 | Disaster Management | Disaster and disaster management | flood, cyclone, NDMA, early warning, landslide, glacier lake, heatwave
+G3_SEC_01 | Mains | GS3 | Internal Security | Linkages between development and spread of extremism; role of external state and non-state actors in creating challenges to internal security | Naxalism, Maoist, insurgency, terrorism, Kashmir, northeast
+G3_SEC_02 | Mains | GS3 | Internal Security | Challenges to internal security through communication networks; role of media and social networking sites; basics of cyber security; money laundering | cyber attack, fake news, social media, data protection, hawala, PMLA
+G3_SEC_03 | Mains | GS3 | Internal Security | Security challenges and their management in border areas; linkages of organized crime with terrorism; various security forces and agencies and their mandate | border, BSF, NIA, drug trafficking, coastal security, CAPF, LAC
+G4_ETH_01 | Mains | GS4 | Ethics | Ethics and human interface: essence, determinants and consequences of ethics in human action; dimensions of ethics; ethics in private and public relationships | ethics, morality, conscience, values, dilemma
+G4_ETH_02 | Mains | GS4 | Ethics | Human values: lessons from lives of great leaders, reformers and administrators; role of family, society and educational institutions in inculcating values | Gandhi, values, leaders, family, education, character
+G4_ETH_03 | Mains | GS4 | Ethics | Attitude: content, structure, function; moral and political attitudes; social influence and persuasion | attitude, persuasion, prejudice, bias, social influence
+G4_ETH_04 | Mains | GS4 | Ethics | Aptitude and foundational values for civil service: integrity, impartiality, non-partisanship, objectivity, dedication, empathy, tolerance, compassion | integrity, impartiality, empathy, compassion, objectivity
+G4_ETH_05 | Mains | GS4 | Ethics | Emotional intelligence: concepts, utility and application in administration and governance | emotional intelligence, self-awareness, stress, leadership
+G4_ETH_06 | Mains | GS4 | Ethics | Contributions of moral thinkers and philosophers from India and the world | Kant, Aristotle, Kautilya, Gandhi, Buddha, utilitarianism
+G4_ETH_07 | Mains | GS4 | Ethics | Public/civil service values and ethics in public administration: status and problems; ethical concerns and dilemmas in government and private institutions; accountability and ethical governance; ethical issues in international relations and funding; corporate governance | conflict of interest, whistleblower, code of conduct, corporate governance, lobbying
+G4_ETH_08 | Mains | GS4 | Ethics | Probity in governance: concept of public service; philosophical basis of governance and probity; information sharing and transparency; RTI; codes of ethics and conduct; citizen charters; work culture; quality of service delivery; utilization of public funds; challenges of corruption | corruption, probity, RTI, citizen charter, public funds, service delivery
+G4_ETH_09 | Mains | GS4 | Ethics | Case studies on the above issues | dilemma, case study, administrative decision, public interest

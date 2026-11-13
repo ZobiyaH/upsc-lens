@@ -1,0 +1,1061 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UPSC LENS | Newspaper Analysis</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg:#f4f6f9;
+  --surface:#fff;
+  --soft:#f8fafc;
+  --navy:#14243a;
+  --navy2:#203752;
+  --text:#202c3b;
+  --muted:#748195;
+  --border:#e5eaf0;
+  --teal:#0d9488;
+  --teal-light:#e4f6f3;
+  --blue:#3975c6;
+  --blue-light:#eaf1fc;
+  --orange:#c27a22;
+  --orange-light:#fff3df;
+  --green:#23845a;
+  --green-light:#e7f5ed;
+  --shadow:0 5px 24px rgba(25,42,62,.055);
+  --radius:14px;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:"DM Sans",sans-serif;
+  font-size:14px;
+  line-height:1.65;
+}
+
+button,input{font:inherit}
+
+.header{
+  background:var(--navy);
+  color:white;
+  padding:17px 5%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+}
+
+.brand{display:flex;align-items:center;gap:13px}
+
+.brand-icon{
+  width:42px;height:42px;border-radius:12px;
+  background:#ffffff1f;display:grid;place-items:center;
+  font-size:21px;
+}
+
+.brand-name{
+  font-family:Manrope,sans-serif;
+  font-size:18px;font-weight:800;
+}
+
+.brand-subtitle{
+  color:#aebdce;font-size:11px;
+  letter-spacing:.7px;text-transform:uppercase;
+}
+
+.header-right{text-align:right;color:#c4d0dd;font-size:12px}
+
+.online-dot{
+  display:inline-block;width:7px;height:7px;
+  background:#48c99a;border-radius:50%;margin-right:6px;
+}
+
+.container{
+  max-width:1250px;
+  padding:34px 24px 60px;
+  margin:auto;
+}
+
+.eyebrow{
+  font-size:11px;text-transform:uppercase;
+  letter-spacing:1.5px;font-weight:700;
+  color:var(--teal);margin-bottom:7px;
+}
+
+h1,h2,h3,h4{font-family:Manrope,sans-serif}
+
+h1{
+  font-size:29px;line-height:1.3;
+  letter-spacing:-.8px;margin:0;color:var(--navy);
+}
+
+.page-description{color:var(--muted);margin:8px 0 25px}
+
+.upload-panel,.processing-panel,.empty-state{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+}
+
+.upload-panel{padding:23px;margin-bottom:23px}
+
+.panel-heading,.processing-top,.results-heading{
+  display:flex;justify-content:space-between;
+  align-items:center;gap:12px;
+}
+
+.panel-heading{margin-bottom:19px}
+
+.panel-heading h2{font-size:16px;margin:0;color:var(--navy)}
+
+.step-label{
+  color:var(--muted);font-size:11px;font-weight:600;
+  background:var(--soft);padding:5px 10px;border-radius:20px;
+}
+
+.upload-controls{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 150px auto;
+  gap:13px;align-items:end;
+}
+
+.field-label{
+  display:block;font-size:12px;font-weight:700;
+  color:#4d5c70;margin-bottom:7px;
+}
+
+.file-area{
+  min-height:74px;border:1.5px dashed #cbd5e1;
+  background:#fafcff;border-radius:10px;
+  display:flex;align-items:center;gap:13px;padding:13px 15px;
+}
+
+.file-area:hover{border-color:var(--teal);background:#f5fcfa}
+
+.file-icon{
+  width:39px;height:39px;flex-shrink:0;
+  display:grid;place-items:center;background:var(--teal-light);
+  color:var(--teal);border-radius:10px;font-size:20px;
+}
+
+.file-content{min-width:0;flex:1}
+.file-content strong{display:block;font-size:12px;overflow-wrap:anywhere}
+.file-content small{display:block;color:var(--muted);font-size:11px;margin-top:2px}
+
+input[type=file]{width:100%;font-size:11px;color:var(--muted)}
+
+input[type=number]{
+  width:100%;height:44px;padding:0 12px;
+  background:white;border:1px solid var(--border);
+  border-radius:9px;outline:none;color:var(--text);
+}
+
+input:focus{border-color:var(--teal)}
+
+.primary-button{
+  height:44px;padding:0 22px;background:var(--navy);
+  color:white;border:0;border-radius:9px;
+  font-weight:700;cursor:pointer;transition:.2s;
+  white-space:nowrap;
+}
+
+.primary-button:hover{background:var(--navy2)}
+.primary-button:disabled{opacity:.55;cursor:not-allowed}
+
+.upload-hint{font-size:11px;color:var(--muted);margin:12px 0 0}
+
+.processing-panel{display:none;padding:18px 20px;margin-bottom:23px}
+.processing-panel.visible{display:block}
+
+.processing-title{font-weight:700;color:var(--navy);font-size:13px}
+.processing-percent{color:var(--teal);font-weight:700;font-size:12px}
+
+#status{color:var(--muted);font-size:12px;margin-top:5px}
+
+.progress-track{
+  width:100%;height:7px;background:#edf0f4;
+  border-radius:20px;overflow:hidden;margin-top:13px;
+}
+
+#prog div{
+  width:0;height:100%;
+  background:linear-gradient(90deg,#0d9488,#36b9a9);
+  border-radius:20px;transition:width .35s ease;
+}
+
+#sum{
+  display:none;padding:13px 17px;
+  border:1px solid #f0dfbf;border-radius:10px;
+  background:var(--orange-light);color:#80531a;
+  font-size:12px;margin-bottom:20px;
+}
+#sum.visible{display:block}
+
+.results-heading{margin:29px 0 15px}
+.results-heading h2{margin:0;font-size:19px;color:var(--navy)}
+.results-caption{color:var(--muted);font-size:11px}
+
+.empty-state{padding:50px 20px;text-align:center}
+.empty-icon{
+  width:55px;height:55px;margin:0 auto 14px;
+  display:grid;place-items:center;border-radius:16px;
+  background:var(--blue-light);color:var(--blue);font-size:25px;
+}
+.empty-state h3{color:var(--navy);margin:0 0 6px;font-size:16px}
+.empty-state p{color:var(--muted);font-size:12px;margin:0}
+
+details.article-card{
+  background:white;border:1px solid var(--border);
+  border-radius:var(--radius);margin-bottom:13px;
+  box-shadow:0 2px 10px rgba(20,36,58,.025);
+  overflow:hidden;
+}
+
+details.article-card[open]{box-shadow:var(--shadow);border-color:#d6e3e7}
+
+.article-card summary{
+  list-style:none;cursor:pointer;padding:19px 21px;
+  display:flex;align-items:flex-start;gap:15px;
+}
+
+.article-card summary::-webkit-details-marker{display:none}
+
+.article-number{
+  width:34px;height:34px;flex-shrink:0;
+  display:grid;place-items:center;border-radius:10px;
+  background:var(--teal-light);color:var(--teal);
+  font-weight:800;font-size:12px;
+}
+
+.article-summary{flex:1;min-width:0}
+.article-summary h3{font-size:14px;line-height:1.5;margin:0 0 7px;color:var(--navy)}
+
+.article-meta{display:flex;flex-wrap:wrap;align-items:center;gap:7px}
+
+.meta-chip{
+  display:inline-flex;align-items:center;font-size:10px;
+  font-weight:600;padding:3px 8px;border-radius:5px;
+  background:#f0f3f7;color:#64748b;
+}
+
+.meta-chip.topic{background:var(--blue-light);color:#3565a5}
+.meta-chip.relevance{background:var(--green-light);color:var(--green)}
+
+.expand-icon{color:#98a4b4;font-size:17px;padding-top:3px}
+details[open] .expand-icon{transform:rotate(180deg)}
+
+.article-body{
+  border-top:1px solid var(--border);
+  padding:22px;
+  display:grid;
+  grid-template-columns:minmax(0,.9fr) minmax(0,1.35fr);
+  gap:25px;
+  align-items:start;
+}
+
+/* Newspaper image panel */
+
+.article-image-wrap{
+  position:sticky;
+  top:15px;
+  background:var(--soft);
+  border:1px solid var(--border);
+  border-radius:11px;
+  padding:10px;
+}
+
+.image-heading{
+  display:flex;justify-content:space-between;
+  align-items:center;gap:8px;margin-bottom:9px;
+}
+
+.image-heading strong{font-size:11px;color:var(--navy)}
+
+.image-heading a{
+  color:var(--teal);font-size:10px;
+  text-decoration:none;font-weight:700;
+}
+
+.article-image{
+  display:block;width:100%;height:auto;
+  max-height:760px;object-fit:contain;
+  object-position:top;
+  border:1px solid var(--border);
+  border-radius:7px;background:white;
+  cursor:zoom-in;
+}
+
+.article-image.hidden{display:none}
+
+.image-loading{
+  min-height:180px;display:grid;place-items:center;
+  text-align:center;color:var(--muted);font-size:12px;
+  padding:15px;
+}
+
+.image-error{
+  color:#b45353;font-size:12px;padding:15px;
+  text-align:center;display:grid;gap:9px;
+}
+
+.retry-button{
+  justify-self:center;
+  border:1px solid #d9a5a5;
+  border-radius:7px;background:white;
+  color:#a33d3d;padding:7px 13px;
+  cursor:pointer;font-weight:700;font-size:11px;
+}
+
+.retry-button:hover{background:#fff3f3}
+
+.content-section{margin-bottom:20px}
+
+.content-section h4{
+  display:flex;align-items:center;gap:8px;
+  font-size:12px;font-weight:800;color:var(--navy);
+  margin:0 0 9px;
+}
+
+.section-dot{
+  height:7px;width:7px;border-radius:50%;
+  background:var(--teal);flex-shrink:0;
+}
+
+.section-content{
+  color:#526175;font-size:12px;line-height:1.75;
+  overflow-wrap:anywhere;
+}
+
+.section-content p{margin:0 0 8px}
+.section-content ul{padding-left:19px;margin:0}
+.section-content li{margin:5px 0}
+
+.source-tag{
+  font-size:9px;font-weight:700;padding:3px 7px;
+  border-radius:4px;margin-left:5px;
+  text-transform:uppercase;vertical-align:middle;
+}
+
+.article{background:var(--green-light);color:var(--green)}
+.notes{background:var(--blue-light);color:var(--blue)}
+.ai{background:var(--orange-light);color:var(--orange)}
+
+.exact-text{
+  white-space:pre-wrap;font-size:11px;color:#536174;
+  max-height:300px;overflow-y:auto;background:#f8fafc;
+  border:1px solid var(--border);border-radius:9px;
+  padding:13px;line-height:1.8;
+}
+
+.footer{text-align:center;color:#96a1b0;font-size:11px;padding:25px 0 0}
+
+@media(max-width:760px){
+  .header{padding:15px 20px}
+  .container{padding:25px 15px 40px}
+  h1{font-size:24px}
+  .upload-controls{grid-template-columns:1fr 1fr}
+  .file-field{grid-column:1/-1}
+  .primary-button{width:100%}
+  .article-body{grid-template-columns:1fr;gap:17px}
+  .article-image-wrap{position:static}
+  .article-image{max-height:600px}
+}
+
+@media(max-width:430px){
+  .header-right{display:none}
+  .upload-controls{grid-template-columns:1fr}
+  .file-field{grid-column:auto}
+  .panel-heading{align-items:flex-start}
+  .article-card summary{padding:15px}
+  .article-body{padding:15px}
+  .results-heading{align-items:flex-start;flex-direction:column}
+}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+  <div class="brand">
+    <div class="brand-icon">✦</div>
+    <div>
+      <div class="brand-name">UPSC LENS</div>
+      <div class="brand-subtitle">UPSC News Mapper</div>
+    </div>
+  </div>
+
+  <div class="header-right">
+    <div>GS Preparation Workspace</div>
+    <div><span class="online-dot"></span>Analysis system ready</div>
+  </div>
+</header>
+
+<main class="container">
+
+  <section>
+    <div class="eyebrow">Your daily preparation workspace</div>
+    <h1>Newspaper Analysis</h1>
+    <p class="page-description">
+      Convert newspaper articles into UPSC-relevant insights,
+      syllabus connections and answer-writing material.
+    </p>
+  </section>
+
+  <section class="upload-panel">
+    <div class="panel-heading">
+      <h2>Upload newspaper PDF</h2>
+      <span class="step-label">STEP 01 · INPUT</span>
+    </div>
+
+    <div class="upload-controls">
+      <div class="file-field">
+        <label class="field-label" for="f">Select newspaper PDF</label>
+        <div class="file-area">
+          <div class="file-icon">▤</div>
+          <div class="file-content">
+            <strong id="fileName">Choose your newspaper PDF</strong>
+            <small id="fileHint">PDF format · Select a file to begin</small>
+            <input type="file" id="f" accept="application/pdf">
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <label class="field-label" for="p">Pages to scan</label>
+        <input type="number" id="p" value="0" min="0" max="100">
+        <small style="display:block;color:#748195;margin-top:5px;font-size:10px">
+          0 means all pages
+        </small>
+      </div>
+
+      <div>
+        <button class="primary-button" id="go">Analyse PDF →</button>
+      </div>
+    </div>
+
+    <p class="upload-hint">
+      Upload a newspaper PDF to identify relevant articles,
+      map them to the UPSC syllabus and generate study material.
+    </p>
+  </section>
+
+  <section class="processing-panel" id="processing">
+    <div class="processing-top">
+      <div class="processing-title">Analysis progress</div>
+      <div class="processing-percent" id="percent">0%</div>
+    </div>
+
+    <div id="status">Waiting for upload...</div>
+    <div class="progress-track" id="prog"><div></div></div>
+  </section>
+
+  <div id="sum"></div>
+
+  <div class="results-heading">
+    <div>
+      <div class="eyebrow">Analysis output</div>
+      <h2>Relevant Articles</h2>
+    </div>
+    <div class="results-caption" id="resultCount">
+      Your results will appear here
+    </div>
+  </div>
+
+  <section id="out">
+    <div class="empty-state">
+      <div class="empty-icon">⌕</div>
+      <h3>Ready to analyse your newspaper?</h3>
+      <p>Upload a PDF above to see UPSC-relevant articles and their analysis.</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    UPSC LENS · Study smarter, connect better.
+  </footer>
+
+</main>
+
+<script>
+const $ = selector => document.querySelector(selector);
+
+const PAPER = {
+  P1:"Prelims GS-I",
+  G1:"Mains GS-1",
+  G2:"Mains GS-2",
+  G3:"Mains GS-3",
+  G4:"Mains GS-4"
+};
+
+const TAG = {
+  article:"Newspaper",
+  notes:"Your notes",
+  ai:"AI knowledge · Verify"
+};
+
+function el(tag,className="",text=undefined){
+  const node=document.createElement(tag);
+  if(className)node.className=className;
+  if(text!==undefined)node.textContent=text;
+  return node;
+}
+
+function safeArray(value){
+  return Array.isArray(value)?value:[];
+}
+
+function addSection(title,content,parent){
+  if(!content)return;
+
+  const section=el("div","content-section");
+  const heading=el("h4");
+  heading.append(el("span","section-dot"));
+  heading.append(document.createTextNode(title));
+
+  section.append(heading);
+  section.append(el("div","section-content",content));
+  parent.append(section);
+}
+
+function addList(title,rows,parent){
+  if(!rows.length)return;
+
+  const section=el("div","content-section");
+  const heading=el("h4");
+  heading.append(el("span","section-dot"));
+  heading.append(document.createTextNode(title));
+
+  const list=el("ul");
+
+  rows.forEach(item=>{
+    const li=el("li");
+    li.append(document.createTextNode((item.text||"")+" "));
+
+    if(item.source && TAG[item.source]){
+      li.append(el("span","source-tag "+item.source,TAG[item.source]));
+    }
+
+    if(Array.isArray(item.note_ids)&&item.note_ids.length){
+      li.append(document.createTextNode(
+        " ("+item.note_ids.join(", ")+")"
+      ));
+    }
+
+    list.append(li);
+  });
+
+  section.append(heading);
+  const content=el("div","section-content");
+  content.append(list);
+  section.append(content);
+  parent.append(section);
+}
+
+function getTopic(result){
+  const match=safeArray(result.candidates).find(
+    candidate=>candidate.id===result.topic_id
+  );
+
+  return (match?.text||result.topic_id||"Unclassified")
+    .split(". Keywords")[0];
+}
+
+/*
+  NEW IMAGE LOADING FUNCTION
+
+  - Uses the original result.idx from Python.
+  - Shows loading only while the image is actually loading.
+  - Allows retry after a failed request.
+  - Does not mark the image as loaded before success.
+  - Displays useful error information in the image panel.
+*/
+
+function loadArticleImage(imageState){
+
+  const {
+    image,
+    loading,
+    openLink,
+    jobId,
+    articleIndex
+  }=imageState;
+
+  if(!jobId || !Number.isInteger(articleIndex)){
+    loading.className="image-error";
+    loading.textContent="Missing job ID or original article index.";
+    loading.style.display="grid";
+    image.classList.add("hidden");
+    return;
+  }
+
+  // Avoid duplicate requests for an already loaded image.
+  if(image.dataset.loaded==="true")return;
+
+  // Prevent simultaneous duplicate requests.
+  if(image.dataset.loading==="true")return;
+
+  loading.className="image-loading";
+  loading.textContent="Loading highlighted newspaper page...";
+  loading.style.display="grid";
+
+  image.classList.add("hidden");
+
+  const imageUrl=
+    "/api/image/"+
+    encodeURIComponent(jobId)+
+    "/"+
+    encodeURIComponent(articleIndex)+
+    "?t="+Date.now();
+
+  image.dataset.loading="true";
+
+  image.onload=()=>{
+
+    image.dataset.loaded="true";
+    image.dataset.loading="false";
+
+    loading.style.display="none";
+    loading.className="image-loading";
+
+    image.classList.remove("hidden");
+
+    openLink.href=imageUrl;
+    openLink.style.display="inline";
+
+    console.log(
+      "[UPSC LENS] Newspaper image loaded:",
+      imageUrl
+    );
+  };
+
+  image.onerror=()=>{
+
+    image.dataset.loaded="false";
+    image.dataset.loading="false";
+
+    image.classList.add("hidden");
+
+    openLink.style.display="none";
+
+    loading.style.display="grid";
+    loading.className="image-error";
+    loading.replaceChildren();
+
+    const message=el(
+      "div",
+      "",
+      "Unable to load newspaper page. Please try again."
+    );
+
+    const retry=el(
+      "button",
+      "retry-button",
+      "Retry image loading"
+    );
+
+    retry.type="button";
+
+    retry.addEventListener("click",event=>{
+      event.stopPropagation();
+      loadArticleImage(imageState);
+    });
+
+    loading.append(message,retry);
+
+    console.error(
+      "[UPSC LENS] Newspaper image failed:",
+      imageUrl
+    );
+  };
+
+  image.src=imageUrl;
+}
+
+function createArticleCard(result,jobId,index){
+
+  const card=el("details","article-card");
+  const summary=el("summary");
+
+  const number=el("div","article-number",String(index+1));
+  const summaryContent=el("div","article-summary");
+
+  summaryContent.append(
+    el("h3","",result.headline||"Untitled article")
+  );
+
+  const meta=el("div","article-meta");
+
+  meta.append(el("span","meta-chip","Page "+(result.page??"—")));
+
+  const paperCode=(result.topic_id||"").slice(0,2);
+
+  if(PAPER[paperCode]){
+    meta.append(el("span","meta-chip",PAPER[paperCode]));
+  }
+
+  if(result.relevance){
+    meta.append(el("span","meta-chip relevance",result.relevance));
+  }
+
+  meta.append(el("span","meta-chip topic",getTopic(result)));
+
+  if(result.confidence){
+    meta.append(el("span","meta-chip","Confidence: "+result.confidence));
+  }
+
+  summaryContent.append(meta);
+  summary.append(number,summaryContent,el("span","expand-icon","⌄"));
+  card.append(summary);
+
+  const body=el("div","article-body");
+  const left=el("div");
+  const right=el("div");
+
+  /* Newspaper page image */
+
+  const imageWrap=el("div","article-image-wrap");
+
+  const imageHeading=el("div","image-heading");
+  imageHeading.append(el("strong","","ORIGINAL NEWSPAPER PAGE"));
+
+  const openLink=el("a","","Open full image ↗");
+  openLink.target="_blank";
+  openLink.rel="noopener noreferrer";
+  openLink.style.display="none";
+
+  imageHeading.append(openLink);
+
+  const image=el("img","article-image hidden");
+
+  image.alt="Original newspaper page with selected article highlighted";
+
+  // Do not use browser lazy loading here. The request is already
+  // controlled by the article expansion event.
+  image.loading="eager";
+
+  const loading=el(
+    "div",
+    "image-loading",
+    "Expand this article to load its highlighted newspaper page."
+  );
+
+  imageWrap.append(imageHeading,loading,image);
+  left.append(imageWrap);
+
+  const articleIndex=Number(result.idx);
+
+  const imageState={
+    image,
+    loading,
+    openLink,
+    jobId,
+    articleIndex
+  };
+
+  // Use the details toggle event and check actual open state.
+  card.addEventListener("toggle",()=>{
+
+    if(card.open){
+      loadArticleImage(imageState);
+    }
+
+  });
+
+  /* AI analysis */
+
+  addSection("Summary",result.summary,right);
+  addList("Background",safeArray(result.background),right);
+  addList("Prelims pointers",safeArray(result.prelims_pointer),right);
+  addSection("Mains question · AI generated",result.mains_question,right);
+  addList("Mains answer points",safeArray(result.mains_points),right);
+
+  const pyqSection=el("div","content-section");
+  const pyqHeading=el("h4");
+  pyqHeading.append(el("span","section-dot"));
+  pyqHeading.append(document.createTextNode("Similar past questions"));
+  pyqSection.append(pyqHeading);
+
+  const pyqs=safeArray(result.pyqs);
+
+  if(pyqs.length){
+    const list=el("ul","section-content");
+
+    pyqs.forEach(question=>{
+      const meta=question.meta||{};
+
+      const li=el(
+        "li",
+        "",
+        (meta.year||"")+" "+(meta.paper||"")+": "+(question.text||"")
+      );
+
+      list.append(li);
+    });
+
+    pyqSection.append(list);
+
+  }else{
+
+    pyqSection.append(el(
+      "div",
+      "section-content",
+      "No matching previous-year questions loaded yet."
+    ));
+  }
+
+  right.append(pyqSection);
+
+  const exactSection=el("div","content-section");
+  const exactHeading=el("h4");
+
+  exactHeading.append(el("span","section-dot"));
+  exactHeading.append(document.createTextNode("Original newspaper text"));
+
+  exactSection.append(exactHeading);
+
+  exactSection.append(el(
+    "div",
+    "exact-text",
+    result.text||"No original text available."
+  ));
+
+  right.append(exactSection);
+
+  body.append(left,right);
+  card.append(body);
+
+  return card;
+}
+
+/* File selection */
+
+$("#f").addEventListener("change",()=>{
+  const file=$("#f").files[0];
+
+  if(!file){
+    $("#fileName").textContent="Choose your newspaper PDF";
+    $("#fileHint").textContent="PDF format · Select a file to begin";
+    return;
+  }
+
+  $("#fileName").textContent=file.name;
+
+  $("#fileHint").textContent=
+    (file.size/(1024*1024)).toFixed(2)+" MB · Ready to analyse";
+});
+
+/* Progress */
+
+function setProgress(value){
+  const percentage=Math.max(0,Math.min(100,value));
+
+  $("#prog div").style.width=percentage+"%";
+  $("#percent").textContent=Math.round(percentage)+"%";
+}
+
+function showError(message){
+  $("#status").textContent="Error: "+message;
+  $("#status").style.color="#c24141";
+}
+
+/* AI source summary */
+
+function updateSummary(results){
+
+  const allPoints=results.flatMap(result=>[
+    ...safeArray(result.background),
+    ...safeArray(result.prelims_pointer),
+    ...safeArray(result.mains_points)
+  ]);
+
+  const aiCount=allPoints.filter(
+    item=>item.source==="ai"
+  ).length;
+
+  if(allPoints.length){
+
+    $("#sum").textContent=
+      "AI verification note: "+aiCount+" of "+allPoints.length+
+      " study points are based on AI knowledge. Verify these against reliable sources.";
+
+    $("#sum").classList.add("visible");
+
+  }else{
+
+    $("#sum").classList.remove("visible");
+  }
+}
+
+/* Upload and analysis */
+
+async function analysePDF(){
+
+  const file=$("#f").files[0];
+
+  if(!file){
+    alert("Please select a newspaper PDF first.");
+    return;
+  }
+
+  if(file.type!=="application/pdf" &&
+     !file.name.toLowerCase().endsWith(".pdf")){
+
+    alert("Please select a valid PDF file.");
+    return;
+  }
+
+  const button=$("#go");
+
+  button.disabled=true;
+  button.textContent="Analysing...";
+
+  $("#processing").classList.add("visible");
+  $("#out").replaceChildren();
+  $("#sum").classList.remove("visible");
+  $("#resultCount").textContent="Processing your newspaper";
+
+  setProgress(0);
+
+  $("#status").style.color="";
+  $("#status").textContent="Uploading and splitting the pages...";
+
+  try{
+
+    const formData=new FormData();
+
+    formData.append("file",file);
+    formData.append("pages",$("#p").value||"0");
+
+    const uploadResponse=await fetch("/api/analyse",{
+      method:"POST",
+      body:formData
+    });
+
+    if(!uploadResponse.ok){
+      throw new Error(
+        "Upload failed. Server returned "+uploadResponse.status
+      );
+    }
+
+    const uploadData=await uploadResponse.json();
+
+    if(!uploadData.job){
+      throw new Error("The server did not return a job ID.");
+    }
+
+    const jobId=uploadData.job;
+
+    let completed=false;
+    let lastResultCount=0;
+
+    while(!completed){
+
+      await new Promise(resolve=>setTimeout(resolve,2000));
+
+      const response=await fetch(
+        "/api/job/"+encodeURIComponent(jobId),
+        {cache:"no-store"}
+      );
+
+      if(!response.ok){
+        throw new Error("Unable to retrieve analysis progress.");
+      }
+
+      const job=await response.json();
+
+      const total=Number(job.total)||0;
+      const done=Number(job.done)||0;
+      const results=safeArray(job.results);
+
+      if(job.status==="error"){
+        throw new Error(job.error||"Analysis failed.");
+      }
+
+      if(job.status==="parsing"){
+
+        $("#status").textContent=
+          "Extracting and splitting newspaper pages...";
+
+        setProgress(2);
+
+      }else{
+
+        setProgress(total>0?(done/total)*100:5);
+
+        $("#status").textContent=
+          "Analysed "+done+" of "+total+
+          " articles · "+results.length+" relevant articles found";
+
+        while(lastResultCount<results.length){
+
+          const result=results[lastResultCount];
+
+          $("#out").append(
+            createArticleCard(result,jobId,lastResultCount)
+          );
+
+          lastResultCount++;
+        }
+
+        $("#resultCount").textContent=
+          results.length+" relevant articles found";
+
+        updateSummary(results);
+      }
+
+      if(job.status==="done"){
+
+        completed=true;
+        setProgress(100);
+
+        $("#status").textContent="Analysis completed successfully.";
+
+        $("#resultCount").textContent=
+          results.length+" relevant articles analysed";
+
+        if(!results.length){
+
+          const empty=el("div","empty-state");
+
+          empty.append(el("div","empty-icon","⌕"));
+          empty.append(el("h3","","No relevant articles found"));
+
+          empty.append(el(
+            "p",
+            "",
+            "Try another newspaper or check your PDF content."
+          ));
+
+          $("#out").append(empty);
+        }
+      }
+    }
+
+  }catch(error){
+
+    showError(error.message||"Something went wrong.");
+
+    $("#resultCount").textContent="Analysis could not be completed";
+
+  }finally{
+
+    button.disabled=false;
+    button.textContent="Analyse PDF →";
+  }
+}
+
+$("#go").addEventListener("click",analysePDF);
+</script>
+
+</body>
+</html>
